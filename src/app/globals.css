@@ -1,26 +1,78 @@
+/* globals.css */
 @import "tailwindcss";
 
+/* Light theme colors */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-primary: #003fc7;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #22c55e;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+  
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Theme definitions */
+@theme {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-foreground: var(--color-secondary-foreground);
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-foreground);
+  --font-family-sans: var(--font-inter);
+  --font-family-mono: var(--font-fira-code);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-family-sans);
+    
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  
+  h1, h2, h3, h4 {
+    font-weight: bold;
+    letter-spacing: -0.025em;
+  }
+  
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  
+  @screen sm {
+    h1 {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+  
+  @screen lg {
+    h1 {
+      font-size: 3.75rem;
+      line-height: 1;
+    }
+  }
+  
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  
+  @screen sm {
+    h2 {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+  }
+  
+  code {
+    font-family: var(--font-family-mono);
+  }
 }
