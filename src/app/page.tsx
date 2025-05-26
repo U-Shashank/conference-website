@@ -291,69 +291,85 @@ export default function Home() {
                 style={{ transformOrigin: "top" }}
               ></motion.div>
               
-              {/* Timeline events */}
-              <div className="space-y-4">
-                {importantDates.map((item, index) => (
-                  <motion.div 
-                    key={index} 
-                    initial={{ 
-                      x: index % 2 === 0 ? -50 : 50, 
-                      opacity: 0 
-                    }}
-                    whileInView={{ 
-                      x: 0, 
-                      opacity: 1 
-                    }}
-                    transition={{ 
-                      duration: 0.5, 
-                      delay: index * 0.1 
-                    }}
-                    viewport={{ once: true }}
-                    className={`relative flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
-                  >
-                    {/* Circle on timeline */}
-                    <motion.div 
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      transition={{ 
-                        duration: 0.4, 
-                        delay: 0.2 + index * 0.1 
-                      }}
-                      viewport={{ once: true }}
-                      className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-white shadow-lg bg-primary"
-                    ></motion.div>
-                    
-                    {/* Content box */}
-                    <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                      <motion.div 
-                        whileHover={{ 
-                          scale: 1.03, 
-                          boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
-                        }}
-                        className={`p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out
-                          ${item.current 
-                            ? 'bg-primary text-primary-foreground' 
-                            : 'bg-muted'}`}
-                      >
-                        <h3 className={`text-xl font-semibold mb-2 ${item.current ? 'text-primary-foreground' : 'text-primary'}`}>
-                          {item.date}
-                        </h3>
-                        <p className={item.current ? 'text-primary-foreground' : 'text-foreground'}>
-                          {item.event}
-                        </p>
-                        {item.current && (
-                          <div className="mt-2 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary text-secondary-foreground">
-                            CURRENT
-                          </div>
-                        )}
-                      </motion.div>
-                    </div>
-                    
-                    {/* Empty space for the other side */}
-                    <div className="w-5/12"></div>
-                  </motion.div>
-                ))}
-              </div>
+             {/* Timeline events */}
+<div className="space-y-8 md:space-y-6">
+  {importantDates.map((item, index) => (
+    <motion.div
+      key={index}
+      initial={{
+        x: index % 2 === 0 ? -50 : 50,
+        opacity: 0
+      }}
+      whileInView={{
+        x: 0,
+        opacity: 1
+      }}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.1
+      }}
+      viewport={{ once: true }}
+      className={`relative flex items-center 
+        ${/* Mobile: always center align */ ''}
+        flex-col md:${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}
+      `}
+    >
+      {/* Circle on timeline */}
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{
+          duration: 0.4,
+          delay: 0.2 + index * 0.1
+        }}
+        viewport={{ once: true }}
+        className="hidden md:block absolute left-1/2 transform -translate-x-1/2 
+          w-4 h-4 md:w-6 md:h-6 
+          rounded-full border-2 md:border-4 border-white shadow-lg bg-primary
+          z-10 top-1/2 md:top-auto md:transform md:-translate-y-1/2"
+      ></motion.div>
+
+      {/* Content box */}
+      <div className={`
+        w-full px-4 md:w-5/12 
+        text-center md:${index % 2 === 0 ? 'text-right md:pr-8' : 'text-left md:pl-8'}
+      `}>
+        <motion.div
+          whileHover={{
+            scale: 1.03,
+            boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+          }}
+          className={`p-3 md:p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out
+            ${item.current
+              ? 'bg-primary text-primary-foreground'
+              : 'bg-muted'}`}
+        >
+          <h3 className={`
+            text-base md:text-xl font-semibold mb-1 md:mb-2 
+            ${item.current ? 'text-primary-foreground' : 'text-primary'}
+          `}>
+            {item.date}
+          </h3>
+          <p className={`
+            text-sm md:text-base leading-relaxed
+            ${item.current ? 'text-primary-foreground' : 'text-foreground'}
+          `}>
+            {item.event}
+          </p>
+          {item.current && (
+            <div className="mt-2 inline-flex items-center px-2 md:px-3 py-1 rounded-full 
+              text-xs font-medium bg-secondary text-secondary-foreground">
+              CURRENT
+            </div>
+          )}
+        </motion.div>
+      </div>
+
+      {/* Empty space for the other side - only on desktop */}
+      <div className="hidden md:block md:w-5/12"></div>
+    </motion.div>
+  ))}
+</div>
             </div>
             
             <motion.div 
