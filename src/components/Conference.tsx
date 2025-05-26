@@ -28,13 +28,13 @@ export default function ConferenceHeader() {
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className={`transition-all duration-1000 delay-300 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <p className="text-white font-bold tracking-wider mb-2 md:text-xl">
-            <span className="bg-black bg-opacity-30 px-4 py-1 rounded-full">21-22 February 2025</span>
+            <span className="bg-black bg-opacity-30 px-4 py-1 rounded-full">13-14 February 2026</span>
           </p>
         </div>
         
         <div className={`transition-all duration-1000 delay-500 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <h1 className="text-white font-extrabold leading-tight tracking-tighter mt-4 mb-4 px-4 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-            6th INTERNATIONAL CONFERENCE ON 
+            7th INTERNATIONAL CONFERENCE ON 
             <span className="block">INNOVATIVE TRENDS IN</span>
             <span className="block">INFORMATION TECHNOLOGY</span>
           </h1>

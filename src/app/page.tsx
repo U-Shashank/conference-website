@@ -2,6 +2,8 @@
 import { useState, useRef, useEffect } from 'react';
 import ConferenceHeader from '@/components/Conference';
 import * as motion from 'motion/react-client';
+import facultyImage from '@/assets/faculty.png';
+import campusImage from '@/assets/campus.png';
 
 export default function Home() {
   // For scroll-based animations
@@ -178,21 +180,12 @@ export default function Home() {
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20"
             >
               <div className="order-2 lg:order-1">
-                <h3 className="text-foreground text-2xl font-semibold mb-4">Indian Institute of Information Technology Kottayam</h3>
+                {/* <h3 className="text-foreground text-2xl font-semibold mb-4">Indian Institute of Information Technology Kottayam</h3> */}
                 <p className="text-foreground mb-4">
-                  The Indian Institute of Information Technology Kottayam (CEK) is one of the premier technical institutions in Kerala, 
-                  established in 2000. Located in the beautiful city of Kottayam, the college offers undergraduate 
-                  and graduate programs in various engineering disciplines.
+                  Indian Institute of Information Technology, Kottayam, situated in Valavoor, Pala, Kerala, is a distinguished institution designated as "An Institute of National Importance" by the Ministry of Education, Government of India, under the IIIT (PPP) Act of 2017. Nestled in the culturally rich district of Kerala, renowned for its vibrant educational ambiance, IIIT Kottayam thrives in a distinctive environment that nurtures a comprehensive learning journey.
                 </p>
                 <p className="text-foreground mb-4">
-                  With state-of-the-art laboratories and a focus on innovation and research, CEK has become a 
-                  hub for technological advancement in the region. The college has consistently produced graduates 
-                  who are leaders in their fields across the globe.
-                </p>
-                <p className="text-foreground">
-                  The Department of Information Technology at CEK is hosting the 6th International Conference on 
-                  Innovative Trends in Information Technology, continuing its tradition of fostering academic 
-                  excellence and industry collaboration.
+                  The campus, sprawling across 53 acres, offers an environment of tranquility and beauty, providing an ideal backdrop for scholarly pursuits and research endeavors. It boasts state-of-the-art infrastructure, featuring cutting-edge classrooms, advanced laboratories, extensive libraries, comfortable hostels, and recreational facilities. IIIT Kottayam is deeply committed to providing a diverse range of programs, including the renowned 4-year B.Tech and B.Tech (Hons) programs in Computer Science and Engineering, Electronics and Communication Engineering, as well as specialized tracks in Cyber Security and AI and Data Science.
                 </p>
               </div>
               <div className="order-1 lg:order-2 flex justify-center">
@@ -200,15 +193,15 @@ export default function Home() {
                   whileHover={{ rotate: 0 }}
                   className="relative w-full max-w-md aspect-video"
                 >
-                  <motion.div 
+                  {/* <motion.div 
                     animate={{ 
                       rotate: [3, 2, 3],
                       transition: { duration: 8, repeat: Infinity, repeatType: "reverse" }
                     }}
                     className="absolute inset-0 bg-primary rounded-lg"
-                  ></motion.div>
+                  ></motion.div> */}
                   <img 
-                    src="/api/placeholder/600/400" 
+                    src={campusImage.src} 
                     alt="Indian Institute of Information Technology Kottayam Campus" 
                     className="relative z-10 rounded-lg shadow-lg w-full h-full object-cover"
                   />
@@ -228,37 +221,35 @@ export default function Home() {
                   whileHover={{ rotate: 0 }}
                   className="relative w-full max-w-md aspect-video"
                 >
-                  <motion.div 
+                  {/* <motion.div 
                     animate={{ 
                       rotate: [-3, -2, -3],
                       transition: { duration: 7, repeat: Infinity, repeatType: "reverse" }
                     }}
                     className="absolute inset-0 bg-secondary rounded-lg"
-                  ></motion.div>
+                  >
+                    
+                  </motion.div> */}
                   <img 
-                    src="/api/placeholder/600/400" 
-                    alt="Technology Conference Hall" 
+                    src={facultyImage.src} 
+                    alt="IIIT Kottayam Faculty" 
                     className="relative z-10 rounded-lg shadow-lg w-full h-full object-cover"
                   />
                 </motion.div>
               </div>
               <div>
-                <h3 className="text-foreground text-2xl font-semibold mb-4">Department of Information Technology</h3>
+                {/* <h3 className="text-foreground text-2xl font-semibold mb-4">Department of Information Technology</h3> */}
                 <p className="text-foreground mb-4">
-                  The Department of Information Technology at CEK was established in 2001 and has since been 
-                  at the forefront of IT education and research in the region. The department offers a Bachelor's 
-                  program in Information Technology and a Master's program in Computer Science with specialization 
-                  in Artificial Intelligence.
+                  Beyond its academic offerings, IIIT Kottayam is deeply ingrained in the cultural and intellectual fabric of Kerala, often referred to as "God's Own Country" for its lush landscapes and vibrant culture. Kerala is renowned for its literacy rate, healthcare systems, and progressive social indicators. The state embraces a unique blend of tradition and modernity, making it an ideal backdrop for a forward-thinking institution like IIIT Kottayam.
                 </p>
                 <p className="text-foreground mb-4">
-                  With a focus on emerging technologies like AI, Machine Learning, and Cybersecurity, the department 
-                  provides students with practical exposure to cutting-edge technologies through industry collaborations 
-                  and research projects.
+                  The institute's faculty comprises seasoned professors and researchers, all leaders in their respective fields, who actively engage in cutting-edge research and contribute significantly to the academic community. Their expertise is passed on to students, fostering a culture of innovation and intellectual curiosity.
+                </p>
+                <p className="text-foreground mb-4">
+                  Furthermore, IIIT Kottayam encourages active collaboration with industry partners and research organizations, opening doors to internships, placements, and joint projects. This vital connection between academia and industry equips students with practical skills and experiences, preparing them for a seamless transition into the professional world.
                 </p>
                 <p className="text-foreground">
-                  The department has been organizing the International Conference on Innovative Trends 
-                  in Information Technology biennially since 2015, bringing together researchers and practitioners 
-                  from around the world.
+                  IIIT Kottayam's research contributions in fields such as Artificial Intelligence, Data Science, Cybersecurity, and Computer Vision have earned it recognition both Nationally and Internationally.
                 </p>
               </div>
             </motion.div>
