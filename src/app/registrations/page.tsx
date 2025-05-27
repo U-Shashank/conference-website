@@ -317,7 +317,7 @@ export default function Registrations() {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="space-y-8"
+                className=" flex flex-col justify-around space-y-8"
               >
                 <div className="bg-white rounded-xl shadow-md p-6 border-l-4 border-secondary">
                   <h3 className="text-2xl font-semibold text-primary mb-4">How to Register?</h3>
@@ -367,18 +367,17 @@ export default function Registrations() {
             >
               <h3 className="text-2xl font-bold text-primary mb-4">Need Help with Registration?</h3>
               <p className="text-foreground mb-6">
-                If you have any questions or need assistance with the registration process, please don't hesitate to contact our support team.
+          If you have any questions or need assistance with the registration process, please don't hesitate to contact our support team.
               </p>
               <motion.a
-                href="mailto:icitiit25@iiitkottayam.ac.in"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
+          href="mailto:icitiit25@iiitkottayam.ac.in"
+          whileHover={{ opacity: 0.92 }}
+          className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
               >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
-                Contact Support
+          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          Contact Support
               </motion.a>
             </motion.div>
           </div>

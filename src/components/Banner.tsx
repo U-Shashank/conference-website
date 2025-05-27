@@ -46,7 +46,7 @@ export function Banner() {
             <div>
               <h2 className="text-xl font-bold text-foreground">ICITIIT'25</h2>
               <p className="text-sm text-muted-foreground">
-                21-22 February 2025 • Indian Institute of Information Technology
+                13-14 February 2026 • Indian Institute of Information Technology
               </p>
             </div>
           </div>

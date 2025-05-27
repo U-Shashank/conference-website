@@ -243,7 +243,7 @@ export default function Speakers() {
         </motion.section>
 
         {/* Additional Info Section */}
-        <motion.section
+        {/* <motion.section
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -272,7 +272,7 @@ export default function Speakers() {
               </motion.button>
             </motion.div>
           </div>
-        </motion.section>
+        </motion.section> */}
       </main>
     </div>
   );

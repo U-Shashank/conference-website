@@ -415,7 +415,7 @@ export default function Authors() {
           </div>
         </motion.section>
         
-        {/* Final Call to Action */}
+        {/* Final Call to Action
         <motion.section 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -439,7 +439,7 @@ export default function Authors() {
               viewport={{ once: true }}
               className="text-lg text-foreground mb-8 max-w-3xl mx-auto"
             >
-              Share your innovative work with the global research community at ICIIT 2025. Submit your paper before the deadline to be part of this prestigious conference.
+              Share your innovative work with the global research community at ICIIT 2026. Submit your paper before the deadline to be part of this prestigious conference.
             </motion.p>
             <motion.div 
               initial={{ y: 20, opacity: 0 }}
@@ -464,7 +464,7 @@ export default function Authors() {
               </motion.button>
             </motion.div>
           </div>
-        </motion.section>
+        </motion.section> */}
       </main>
     </div>
   );
