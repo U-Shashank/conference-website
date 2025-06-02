@@ -6,12 +6,10 @@ import facultyImage from "@/assets/faculty.png";
 import campusImage from "@/assets/campus.png";
 
 export default function Home() {
-  // For scroll-based animations
   const conferenceRef = useRef(null);
   const aboutRef = useRef(null);
   const datesRef = useRef(null);
 
-  // Conference files with "new" flag for recent additions
   const conferenceFiles = [
     {
       title: "Call for Papers",
@@ -39,7 +37,6 @@ export default function Home() {
     },
   ];
 
-  // Important dates for the timeline
   const importantDates = [
     { date: "October 15, 2024", event: "Paper Submission Deadline" },
     { date: "November 20, 2024", event: "Notification of Acceptance" },
@@ -52,15 +49,13 @@ export default function Home() {
     <div className="min-h-screen">
       <ConferenceHeader />
 
-      {/* Main Content - Vertically stacked sections */}
-      <main className="text-balance">
-        {/* Conference Information Section */}
+      <main className="">
         <motion.section
           ref={conferenceRef}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           className="py-16 px-4 bg-white"
         >
           <div className="max-w-7xl mx-auto">
@@ -68,38 +63,42 @@ export default function Home() {
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
               className="text-4xl text-primary font-bold text-center mb-12"
             >
               Conference Information
             </motion.h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center md:text-left"
               >
                 <h3 className="text-2xl text-foreground font-semibold mb-6">
                   Conference Overview
                 </h3>
-                <p className="text-foreground mb-4">
+                <p className="text-foreground mb-4 text-balance">
                   The 6th International Conference on Innovative Trends in
                   Information Technology (ICIIT 2025) brings together
                   researchers, academics, and industry professionals to share
                   their knowledge and research experiences in the fields of
                   information technology.
                 </p>
-                <p className="text-foreground mb-4">
+                <p className="text-foreground mb-4 text-balance">
                   This year's special theme, "Secure, Trustworthy, and Socially
                   Responsible AI," focuses on addressing the ethical challenges
                   and security concerns in artificial intelligence as it becomes
                   increasingly integrated into our daily lives.
                 </p>
                 <p className="text-foreground mb-4">
-                  We invite original research papers on various topics including
+                  We invite original research papers on topics including
                   but not limited to:
                 </p>
-                <ul className="list-disc pl-5 mb-6 text-foreground">
+                <div className="flex justify-center md:justify-start text-left">
+                  <ul className="list-disc pl-5 mb-6 text-left text-foreground">
                   <li>Artificial Intelligence and Machine Learning</li>
                   <li>Ethical Implications of AI Systems</li>
                   <li>Cybersecurity and Secure Computing</li>
@@ -108,15 +107,17 @@ export default function Home() {
                   <li>Cloud Computing and Distributed Systems</li>
                   <li>Blockchain Technologies and Applications</li>
                   <li>Human-Computer Interaction</li>
-                </ul>
+                  </ul>
+                </div>
               </motion.div>
 
               <motion.div
                 initial={{ x: 50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
               >
-                <h3 className="text-2xl text-foreground font-semibold mb-6">
+                <h3 className="text-2xl text-foreground font-semibold mb-6 text-center md:text-left">
                   Conference Documents
                 </h3>
                 <div className="space-y-4">
@@ -171,25 +172,24 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* Divider */}
         <div className="w-full h-24 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 flex items-center justify-center">
           <div className="w-16 h-1 bg-primary rounded-full"></div>
         </div>
 
-        {/* About Us Section */}
         <motion.section
           ref={aboutRef}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           className="py-16 px-4 bg-white"
         >
-          <div className="max-w-7xl mx-auto text-left px-2">
+          <div className="max-w-7xl mx-auto text-center lg:text-lft px-2">
             <motion.h2
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
               className="text-4xl text-primary font-bold text-center mb-12"
             >
               About Us
@@ -203,7 +203,6 @@ export default function Home() {
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20"
             >
               <div className="order-2 lg:order-1">
-                {/* <h3 className="text-foreground text-2xl font-semibold mb-4">Indian Institute of Information Technology Kottayam</h3> */}
                 <p className="text-foreground mb-4">
                   Indian Institute of Information Technology, Kottayam, situated
                   in Valavoor, Pala, Kerala, is a distinguished institution
@@ -231,15 +230,9 @@ export default function Home() {
               <div className="order-1 lg:order-2 flex justify-center">
                 <motion.div
                   whileHover={{ rotate: 0 }}
+                  viewport={{ once: true }}
                   className="relative w-full max-w-md aspect-video"
                 >
-                  {/* <motion.div 
-                    animate={{ 
-                      rotate: [3, 2, 3],
-                      transition: { duration: 8, repeat: Infinity, repeatType: "reverse" }
-                    }}
-                    className="absolute inset-0 bg-primary rounded-lg"
-                  ></motion.div> */}
                   <img
                     src={campusImage.src}
                     alt="Indian Institute of Information Technology Kottayam Campus"
@@ -259,17 +252,9 @@ export default function Home() {
               <div className="flex justify-center">
                 <motion.div
                   whileHover={{ rotate: 0 }}
+                  viewport={{ once: true }}
                   className="relative w-full max-w-md aspect-video"
                 >
-                  {/* <motion.div 
-                    animate={{ 
-                      rotate: [-3, -2, -3],
-                      transition: { duration: 7, repeat: Infinity, repeatType: "reverse" }
-                    }}
-                    className="absolute inset-0 bg-secondary rounded-lg"
-                  >
-                    
-                  </motion.div> */}
                   <img
                     src={facultyImage.src}
                     alt="IIIT Kottayam Faculty"
@@ -278,7 +263,6 @@ export default function Home() {
                 </motion.div>
               </div>
               <div>
-                {/* <h3 className="text-foreground text-2xl font-semibold mb-4">Department of Information Technology</h3> */}
                 <p className="text-foreground mb-4">
                   Beyond its academic offerings, IIIT Kottayam is deeply
                   ingrained in the cultural and intellectual fabric of Kerala,
@@ -316,18 +300,16 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* Divider */}
         <div className="w-full h-24 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 flex items-center justify-center">
           <div className="w-16 h-1 bg-primary rounded-full"></div>
         </div>
 
-        {/* Important Dates Section */}
         <motion.section
           ref={datesRef}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           className="py-16 px-4 bg-white"
         >
           <div className="max-w-5xl mx-auto">
@@ -335,13 +317,13 @@ export default function Home() {
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
               className="text-4xl text-primary font-bold text-center mb-12"
             >
               Important Dates
             </motion.h2>
 
             <div className="relative">
-              {/* Vertical line */}
               <motion.div
                 initial={{ scaleY: 0 }}
                 whileInView={{ scaleY: 1 }}
@@ -350,9 +332,7 @@ export default function Home() {
                 className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary bg-opacity-30"
                 style={{ transformOrigin: "top" }}
               ></motion.div>
-              {/* Timeline events */}
               <div className="relative">
-                {/* Central line - only visible on desktop */}
                 <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-border h-full"></div>
 
                 <div className="space-y-4 md:space-y-6">
@@ -374,7 +354,6 @@ export default function Home() {
                       viewport={{ once: true }}
                       className="relative flex items-center justify-center md:justify-start"
                     >
-                      {/* Circle on timeline */}
                       <motion.div
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
@@ -387,7 +366,6 @@ export default function Home() {
             w-4 h-4 rounded-full border-3 border-white shadow-md bg-primary z-10"
                       ></motion.div>
 
-                      {/* Content container */}
                       <div
                         className={`
           w-full md:w-1/2 px-3 md:px-4
@@ -405,6 +383,7 @@ export default function Home() {
                             boxShadow:
                               "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
                           }}
+                          viewport={{ once: true }}
                           className={`p-3 md:p-4 rounded-lg shadow-md transition-all duration-300 ease-in-out
               ${
                 item.current ? "bg-primary text-primary-foreground" : "bg-muted"
@@ -441,29 +420,6 @@ export default function Home() {
                 </div>
               </div>{" "}
             </div>
-
-            {/* <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="mt-16 text-center bg-muted rounded-lg p-6"
-            >
-              <h3 className="text-foreground text-xl font-medium mb-4">
-                Need more information?
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Please contact us if you have any questions about the conference
-                timeline or submission process.
-              </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-                className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
-              >
-                Contact Us
-              </motion.button>
-            </motion.div> */}
           </div>
         </motion.section>
       </main>

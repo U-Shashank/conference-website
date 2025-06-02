@@ -102,7 +102,7 @@ export default function Speakers() {
       </header>
 
       {/* Main Content - Vertically stacked sections */}
-      <main>
+      <main className='text-balance text-center'>
         {/* Plenary Talks Section */}
         <motion.section 
           ref={plenaryRef}
@@ -113,7 +113,8 @@ export default function Speakers() {
           className="py-16 px-4 bg-white"
         >
           <div className="max-w-7xl mx-auto">
-            <motion.h2 
+            <motion.h2
+              viewport={{once:true}} 
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
@@ -133,7 +134,7 @@ export default function Speakers() {
                   whileHover={{ y: -5 }}
                   className="bg-muted rounded-xl overflow-hidden shadow-lg"
                 >
-                  <div className="flex flex-col md:flex-row h-full">
+                  <div className="flex flex-col md:flex-row h-full text-center">
                     <div className="md:w-2/5 relative">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20"></div>
                       <img 
@@ -145,14 +146,15 @@ export default function Speakers() {
                     <div className="md:w-3/5 p-6 flex flex-col justify-between">
                       <div>
                         <h3 className="text-2xl font-bold text-foreground mb-2">{speaker.name}</h3>
-                        <p className="text-sm text-muted-foreground mb-4">{speaker.title}</p>
-                        <div className="mb-4">
+                        <div className="flex items-center justify-center h-[100]">
+                          <p className="text-sm text-muted-foreground mb-4 text-center">{speaker.title}</p>
+                        </div>                        <div className="mb-4">
                           <span className="inline-block bg-primary/10 text-primary px-3 py-1 text-sm font-medium rounded-full">
                             Plenary Speaker
                           </span>
                         </div>
                         <h4 className="text-lg font-semibold text-primary mb-1">Talk Title:</h4>
-                        <p className="text-foreground mb-4">"{speaker.talkTitle}"</p>
+                        <p className="text-foreground mb-4 h-[50]">"{speaker.talkTitle}"</p>
                       </div>
                       <div className="mt-auto">
                         <div className="flex items-center text-muted-foreground">
@@ -185,7 +187,8 @@ export default function Speakers() {
           className="py-16 px-4 bg-white"
         >
           <div className="max-w-7xl mx-auto">
-            <motion.h2 
+            <motion.h2
+              viewport={{once:true}} 
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
@@ -217,14 +220,16 @@ export default function Speakers() {
                     <div className="md:w-3/5 p-6 flex flex-col justify-between">
                       <div>
                         <h3 className="text-2xl font-bold text-foreground mb-2">{speaker.name}</h3>
-                        <p className="text-sm text-muted-foreground mb-4">{speaker.title}</p>
+                        <div className="flex items-center justify-center h-[100]">
+                          <p className="text-sm text-muted-foreground mb-4 text-center">{speaker.title}</p>
+                        </div>
                         <div className="mb-4">
                           <span className="inline-block bg-secondary/10 text-secondary px-3 py-1 text-sm font-medium rounded-full">
                             Keynote Speaker
                           </span>
                         </div>
                         <h4 className="text-lg font-semibold text-primary mb-1">Talk Title:</h4>
-                        <p className="text-foreground mb-4">"{speaker.talkTitle}"</p>
+                        <p className="text-foreground mb-4 h-[50]">"{speaker.talkTitle}"</p>
                       </div>
                       <div className="mt-auto">
                         <div className="flex items-center text-muted-foreground">

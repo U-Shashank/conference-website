@@ -26,6 +26,7 @@ export default function CameraReadySubmission() {
               repeat: Infinity,
               repeatType: "reverse",
             }}
+            viewport={{ once: true }}
             className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-secondary/20"
           ></motion.div>
 
@@ -40,6 +41,7 @@ export default function CameraReadySubmission() {
               repeat: Infinity,
               repeatType: "reverse",
             }}
+            viewport={{ once: true }}
             className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-primary/30"
           ></motion.div>
         </div>
@@ -49,6 +51,7 @@ export default function CameraReadySubmission() {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-5xl md:text-6xl font-bold mb-4 text-white"
           >
             Camera Ready Submission{" "}
@@ -57,6 +60,7 @@ export default function CameraReadySubmission() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
             className="text-xl text-white/90 max-w-4xl mx-auto"
           >
             Guidelines and instructions for authors with accepted papers
@@ -65,7 +69,7 @@ export default function CameraReadySubmission() {
       </header>
 
       {/* Main Content */}
-      <main>
+      <main className="text-center">
         {/* Instructions Section */}
         <motion.section
           ref={instructionsRef}
@@ -80,6 +84,7 @@ export default function CameraReadySubmission() {
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
               className="text-4xl text-primary font-bold text-center mb-12"
             >
               Instructions to Authors
@@ -89,6 +94,7 @@ export default function CameraReadySubmission() {
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className="space-y-6 bg-muted p-8 rounded-lg"
             >
               <div className="space-y-4">
@@ -105,7 +111,7 @@ export default function CameraReadySubmission() {
 
                 <div className="flex items-start">
                   <svg
-                    className="w-6 h-6 text-primary mt-1 mr-2 flex-shrink-0"
+                    className="w-6 h-6 text-primary mt-1 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -182,7 +188,7 @@ export default function CameraReadySubmission() {
                 </h3>
 
                 <p className="text-foreground">
-                  ICITIIT'25 accepts three types of Registrations: Full Author,
+                  ICITIIT'26 accepts three types of Registrations: Full Author,
                   Accompanying Author and Participant. Full Author registration
                   is for the presenting author of the accepted paper in the
                   conference and it is mandatory.
@@ -219,7 +225,7 @@ export default function CameraReadySubmission() {
                   Presentation Template
                 </h3>
 
-                <div className="flex items-center">
+                <div className="flex items-center justify-center">
                   <svg
                     className="w-6 h-6 text-primary mr-3"
                     fill="none"
@@ -239,6 +245,7 @@ export default function CameraReadySubmission() {
                     <motion.a
                       href="#"
                       whileHover={{ scale: 1.05 }}
+                      viewport={{ once: true }}
                       className="ml-2 text-primary font-medium underline"
                     >
                       Click here to access the PPT
@@ -271,6 +278,7 @@ export default function CameraReadySubmission() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
+                  viewport={{ once: true }}
                   className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
                 >
                   Submit Camera-Ready Paper

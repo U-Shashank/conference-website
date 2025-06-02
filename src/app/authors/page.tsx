@@ -142,7 +142,7 @@ export default function Authors() {
       </header>
       
       {/* Main Content */}
-      <main>
+      <main className=''>
         {/* Technical Tracks Section */}
         <motion.section 
           ref={tracksRef}
@@ -153,7 +153,8 @@ export default function Authors() {
           className="py-16 px-4 bg-white"
         >
           <div className="max-w-7xl mx-auto">
-            <motion.h2 
+            <motion.h2
+              viewport={{once:true}} 
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
@@ -219,7 +220,8 @@ export default function Authors() {
           className="py-16 px-4 bg-white"
         >
           <div className="max-w-5xl mx-auto">
-            <motion.h2 
+            <motion.h2
+              viewport={{once:true}} 
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
@@ -295,14 +297,14 @@ export default function Authors() {
                     </svg>
                   </div>
                 </div>
-                <div className="p-8">
+                <div className="p-8 text-center">
                   <div className="uppercase tracking-wide text-sm text-primary font-semibold">IEEE Conference Template</div>
                   <h3 className="mt-1 text-xl font-medium text-foreground">Format Your Paper for Submission</h3>
                   <p className="mt-2 text-muted-foreground">
                     All papers must follow the IEEE two-column conference format. Use the template link provided 
                     above to ensure your submission meets all formatting requirements.
                   </p>
-                  <div className="mt-4 flex space-x-4">
+                  <div className="mt-4 flex space-x-4 justify-center">
                     <motion.a 
                       href="https://www.ieee.org/conferences/publishing/templates.html"
                       target="_blank"
@@ -348,7 +350,8 @@ export default function Authors() {
           className="py-16 px-4 bg-white"
         >
           <div className="max-w-7xl mx-auto">
-            <motion.h2 
+            <motion.h2
+              viewport={{once:true}} 
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
@@ -424,7 +427,8 @@ export default function Authors() {
           className="py-16 px-4 bg-gradient-to-r from-primary/10 to-secondary/10"
         >
           <div className="max-w-5xl mx-auto text-center">
-            <motion.h2 
+            <motion.h2
+              viewport={{once:true}} 
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}

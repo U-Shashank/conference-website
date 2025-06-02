@@ -44,7 +44,7 @@ export function Banner() {
               />
             </Link>
             <div>
-              <h2 className="text-xl font-bold text-foreground">ICITIIT'25</h2>
+              <h2 className="text-xl font-bold text-foreground">ICITIIT'26</h2>
               <p className="text-sm text-muted-foreground">
                 13-14 February 2026 • Indian Institute of Information Technology
               </p>

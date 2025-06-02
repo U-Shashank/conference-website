@@ -61,13 +61,13 @@ export default function Registrations() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-white/90 max-w-4xl mx-auto"
           >
-            Complete your registration for ICITIIT'25 and join us at this premier information technology event
+            Complete your registration for ICITIIT'26 and join us at this premier information technology event
           </motion.p>
         </div>
       </header>
 
       {/* Main Content - Vertically stacked sections */}
-      <main>
+      <main className='text-center'>
         {/* Registration Types Section */}
         <motion.section 
           ref={introRef}
@@ -78,7 +78,8 @@ export default function Registrations() {
           className="py-16 px-4 bg-white"
         >
           <div className="max-w-7xl mx-auto">
-            <motion.h2 
+            <motion.h2
+              viewport={{ once: true }} 
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
@@ -95,7 +96,7 @@ export default function Registrations() {
               className="bg-muted rounded-xl p-8 shadow-md mb-10"
             >
               <p className="text-foreground text-lg mb-6">
-                ICITIIT'25 accepts three types of Registrations: Full Author, Accompanying Author and Participant. Full Author registration is for the presenting author of the accepted paper in the conference and it is mandatory. The presented papers will be published in IEEE Xplore if they meet the IEEE standards and pass the quality check. Authors who are not presenting can register as Accompanying Author. All other attendees of the conference can register as Participant.
+                ICITIIT'26 accepts three types of Registrations: Full Author, Accompanying Author and Participant. Full Author registration is for the presenting author of the accepted paper in the conference and it is mandatory. The presented papers will be published in IEEE Xplore if they meet the IEEE standards and pass the quality check. Authors who are not presenting can register as Accompanying Author. All other attendees of the conference can register as Participant.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
@@ -148,7 +149,8 @@ export default function Registrations() {
           className="py-16 px-4 bg-white"
         >
           <div className="max-w-7xl mx-auto">
-            <motion.h2 
+            <motion.h2
+              viewport={{ once: true }} 
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
@@ -254,7 +256,8 @@ export default function Registrations() {
           className="py-16 px-4 bg-white"
         >
           <div className="max-w-7xl mx-auto">
-            <motion.h2 
+            <motion.h2
+              viewport={{ once: true }} 
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
@@ -301,13 +304,13 @@ export default function Registrations() {
                     <svg className="w-6 h-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <span className="text-foreground">All correspondence regarding registration for ICITIIT'25 should contain Paper ID as well as registration confirmation number.</span>
+                    <span className="text-foreground">All correspondence regarding registration for ICITIIT'26 should contain Paper ID as well as registration confirmation number.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <span className="text-foreground">Please note that ICITIIT'25, or its hosts, represented by the Organizing Committee as well as the IEEE Kerala Section, will not be responsible for any loss, financial or otherwise, caused by improper transactions conducted online. While Organizers have taken all reasonable precautions to ensure a safe online transaction, it is the registrant's responsibility, while paying the registration fee, to secure their user IDs, passwords, Paper ID, etc.</span>
+                    <span className="text-foreground">Please note that ICITIIT'26, or its hosts, represented by the Organizing Committee as well as the IEEE Kerala Section, will not be responsible for any loss, financial or otherwise, caused by improper transactions conducted online. While Organizers have taken all reasonable precautions to ensure a safe online transaction, it is the registrant's responsibility, while paying the registration fee, to secure their user IDs, passwords, Paper ID, etc.</span>
                   </li>
                 </ul>
               </motion.div>
