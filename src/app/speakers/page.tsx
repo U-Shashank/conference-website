@@ -156,14 +156,14 @@ export default function Speakers() {
                         <h4 className="text-lg font-semibold text-primary mb-1">Talk Title:</h4>
                         <p className="text-foreground mb-4 h-[50]">"{speaker.talkTitle}"</p>
                       </div>
-                      <div className="mt-auto">
+                        <div className="mt-auto flex justify-center">
                         <div className="flex items-center text-muted-foreground">
                           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                           </svg>
                           <span>{speaker.date}</span>
                         </div>
-                      </div>
+                        </div>
                     </div>
                   </div>
                 </motion.div>
@@ -231,14 +231,14 @@ export default function Speakers() {
                         <h4 className="text-lg font-semibold text-primary mb-1">Talk Title:</h4>
                         <p className="text-foreground mb-4 h-[50]">"{speaker.talkTitle}"</p>
                       </div>
-                      <div className="mt-auto">
+                      <div className="mt-auto flex justify-center">
                         <div className="flex items-center text-muted-foreground">
                           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                           </svg>
                           <span>{speaker.date}</span>
                         </div>
-                      </div>
+                        </div>
                     </div>
                   </div>
                 </motion.div>
