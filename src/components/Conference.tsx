@@ -46,7 +46,7 @@ export default function ConferenceHeader() {
         
         <div className={`transition-all duration-1000 delay-900 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <p className="mt-4 text-white bg-black bg-opacity-20 px-6 py-2 rounded-lg inline-block font-medium text-lg md:text-xl italic">
-            Theme: Secure, Trustworthy, and Socially Responsible AI
+            Theme: AI, Automation, and Beyond: Pioneering Trends in Information Technology
           </p>
         </div>
       </div>

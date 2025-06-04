@@ -46,58 +46,28 @@ export default function Speakers() {
   return (
     <div className="min-h-screen">
       {/* Custom Vibrant Header with Gradient */}
-      <header className="relative py-20 bg-gradient-to-r from-primary/90 via-primary to-secondary/70 overflow-hidden h-80">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/api/placeholder/1600/400')] opacity-20 bg-cover bg-center"></div>
-          <div className="absolute inset-0 backdrop-blur-sm"></div>
-          
-          {/* Animated shapes */}
-          <motion.div 
-            animate={{ 
-              rotate: [0, 360],
-              scale: [1, 1.1, 1],
-              opacity: [0.3, 0.5, 0.3]
-            }}
-            transition={{ 
-              duration: 20, 
-              repeat: Infinity, 
-              repeatType: "reverse" 
-            }}
-            className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-secondary/20"
-          ></motion.div>
-          
-          <motion.div 
-            animate={{ 
-              rotate: [360, 0],
-              scale: [1, 1.2, 1],
-              opacity: [0.2, 0.4, 0.2]
-            }}
-            transition={{ 
-              duration: 25, 
-              repeat: Infinity, 
-              repeatType: "reverse" 
-            }}
-            className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-primary/30"
-          ></motion.div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
+      <header className="relative w-full h-90 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-secondary z-0"></div>
+        <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-20 z-10"></div>
+        <div className="absolute inset-0 flex items-center justify-center z-20">
+          <div className="max-w-4xl mx-auto text-center px-4">
           <motion.h1 
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold mb-4 text-white"
-          >
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-6xl font-bold mb-4 text-white"
+            >
             Our Distinguished Speakers
-          </motion.h1>
-          <motion.p 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-white/90 max-w-4xl mx-auto"
-          >
+            </motion.h1>
+            <motion.p 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl text-white/90 max-w-2xl mx-auto"
+            >
             Featuring renowned experts in information technology, artificial intelligence, and data science sharing their insights and latest research
-          </motion.p>
+            </motion.p>
+          </div>
         </div>
       </header>
 

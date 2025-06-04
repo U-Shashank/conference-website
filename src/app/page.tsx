@@ -4,6 +4,7 @@ import ConferenceHeader from "@/components/Conference";
 import * as motion from "motion/react-client";
 import facultyImage from "@/assets/faculty.png";
 import campusImage from "@/assets/campus.png";
+import { Currency } from "lucide-react";
 
 export default function Home() {
   const conferenceRef = useRef(null);
@@ -37,13 +38,32 @@ export default function Home() {
     },
   ];
 
-  const importantDates = [
-    { date: "October 15, 2024", event: "Paper Submission Deadline" },
-    { date: "November 20, 2024", event: "Notification of Acceptance" },
-    { date: "December 15, 2024", event: "Camera-ready Paper Submission" },
-    { date: "January 10, 2025", event: "Early Bird Registration Deadline" },
-    { date: "February 21-22, 2025", event: "Conference Dates", current: false },
-  ];
+  const [importantDates, setImportantDates] = useState([
+    { date: "June 11, 2025", event: "Call for Papers Announcement", current: false },
+    { date: "August 14, 2025", event: "Draft Paper Submission", current: false },
+    { date: "September 16, 2025", event: "Notification of Acceptance", current: false },
+    { date: "October 15, 2025", event: "Final Camera-ready Paper", current: false },
+  ]);
+
+  useEffect(() => {
+    const today = new Date();
+
+    setImportantDates((dates) =>
+      dates.map((date, index) => {
+        const eventDate = new Date(date.date);
+        const prevDate = index > 0 ? new Date(dates[index - 1].date) : null;
+
+        const isCurrent =
+          (prevDate && today > prevDate && today <= eventDate) ||
+          (!prevDate && today <= eventDate);
+
+        return {
+          ...date,
+          current: isCurrent,
+        };
+      })
+    );
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -81,17 +101,27 @@ export default function Home() {
                   Conference Overview
                 </h3>
                 <p className="text-foreground mb-4 text-balance">
-                  The 6th International Conference on Innovative Trends in
-                  Information Technology (ICIIT 2025) brings together
-                  researchers, academics, and industry professionals to share
-                  their knowledge and research experiences in the fields of
-                  information technology.
+                  The 7th International Conference on Innovative Trends in
+                  Information Technology (ICIIT 2026), held in Kottayam, Kerala,
+                  India, highlights "AI, Automation, and Beyond: Pioneering
+                  Trends in Information Technology" as its central theme.
                 </p>
                 <p className="text-foreground mb-4 text-balance">
-                  This year's special theme, "Secure, Trustworthy, and Socially
-                  Responsible AI," focuses on addressing the ethical challenges
-                  and security concerns in artificial intelligence as it becomes
-                  increasingly integrated into our daily lives.
+                  This conference explores the transformative trends in
+                  information technology, focusing on the convergence of
+                  artificial intelligence (AI), automation, and next-generation
+                  technologies. It covers the practical applications of AI,
+                  including machine learning, predictive analytics, and natural
+                  language processing, as well as the impact of automation in
+                  enhancing efficiency across various industries.
+                </p>
+                <p className="text-foreground mb-4 text-balance">
+                  Additionally, it delves into emerging fields like edge
+                  computing, quantum computing, and blockchain, while addressing
+                  key ethical issues such as algorithmic bias and workforce
+                  disruption. Attendees will gain valuable insights into
+                  navigating the future of IT, equipping them to leverage these
+                  advancements responsibly and strategically.
                 </p>
                 <p className="text-foreground mb-4">
                   We invite original research papers on topics including
@@ -107,6 +137,7 @@ export default function Home() {
                   <li>Cloud Computing and Distributed Systems</li>
                   <li>Blockchain Technologies and Applications</li>
                   <li>Human-Computer Interaction</li>
+                  <li>Edge Computing and Quantum Computing</li>
                   </ul>
                 </div>
               </motion.div>
