@@ -567,10 +567,10 @@ export default function Registrations() {
                     Once registration is complete, a separate request need to
                     send with registration details to{" "}
                     <a
-                      href="mailto:icitiit25@iiitkottayam.ac.in"
+                      href="mailto:icitiit26@iiitkottayam.ac.in"
                       className="text-primary hover:underline"
                     >
-                      icitiit25@iiitkottayam.ac.in
+                      icitiit26@iiitkottayam.ac.in
                     </a>{" "}
                     in order to get the invitation letter for VISA purposes.
                   </p>
@@ -605,7 +605,7 @@ export default function Registrations() {
                 support team.
               </p>
               <motion.a
-                href="mailto:icitiit25@iiitkottayam.ac.in"
+                href="mailto:icitiit26@iiitkottayam.ac.in"
                 whileHover={{ opacity: 0.92 }}
                 className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
               >

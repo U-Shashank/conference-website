@@ -2,26 +2,23 @@
 import { useState } from "react";
 
 export default function Footer() {
-  const [emailValue, setEmailValue] = useState("");
+  // const [emailValue, setEmailValue] = useState("");
 
-  interface SubscribeFormEvent extends React.FormEvent<HTMLFormElement> {
-    preventDefault: () => void;
-  }
+  // interface SubscribeFormEvent extends React.FormEvent<HTMLFormElement> {
+  //   preventDefault: () => void;
+  // }
 
-  const handleSubscribe = (e: SubscribeFormEvent): void => {
-    e.preventDefault();
-    // Handle subscription logic
-    alert(`Thank you for subscribing with: ${emailValue}`);
-    setEmailValue("");
-  };
+  // const handleSubscribe = (e: SubscribeFormEvent): void => {
+  //   e.preventDefault();
+  //   // Handle subscription logic
+  //   alert(`Thank you for subscribing with: ${emailValue}`);
+  //   setEmailValue("");
+  // };
 
   // Previous conference versions
   const previousConferences = [
-    { year: "2023", location: "Kottayam, Kerala", link: "#" },
-    { year: "2021", location: "Virtual Conference", link: "#" },
-    { year: "2019", location: "Kottayam, Kerala", link: "#" },
-    { year: "2017", location: "Kottayam, Kerala", link: "#" },
-    { year: "2015", location: "Kottayam, Kerala", link: "#" },
+    { year: "2025", location: "Kottayam, Kerala", link: "https://icitiit25.iiitkottayam.ac.in"},
+    { year: "2024", location: "Kottayam, Kerala", link: "https://icitiit24.iiitkottayam.ac.in"},
   ];
 
   // Useful links
@@ -164,7 +161,7 @@ export default function Footer() {
                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                       ></path>
                     </svg>
-                    ICITIIT'{conf.year} - {conf.location}
+                    ICITIIT'{conf.year}
                   </a>
                 </li>
               ))}
