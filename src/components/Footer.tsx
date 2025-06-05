@@ -44,19 +44,19 @@ export default function Footer() {
             <h3 className="text-xl font-semibold text-primary mb-4">
               ICITIIT'26
             </h3>
-            <p className="text-gray-300 text-sm mb-4">
+            <p className="text-gray-300 text-sm mb-4 text-center md:text-justify">
               The 7<sup>th</sup> International Conference on Innovative Trends
               In Information Technology (ICITIIT'26) is an event covering all
               aspects of software and hardware designs of intelligent and smart
               computing systems. The conference is technically co-sponsored by
               IEEE Kerala Section.
             </p>
-            <p className="text-gray-300 text-sm mb-4">
+            <p className="text-gray-300 text-sm mb-4 text-center md:text-justify">
               ICITIIT'26 allows attendees to benefit from various topics that
               cover state-of-art Information Technology research and
               development.
             </p>
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-300 text-sm text-center md:text-justify">
               Accepted and presented papers will be submitted for possible
               publication in IEEE Xplore.
             </p>

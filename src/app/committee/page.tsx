@@ -308,7 +308,6 @@ export default function Committee() {
             <div className="space-y-12">
               {/* Advisory - Kerala */}
               <div className="bg-muted rounded-lg shadow-sm p-6">
-                {/* Advisory - Kerala */}
                 <h3 className="text-2xl text-primary font-semibold mb-6">
                   From Kerala
                 </h3>
@@ -394,31 +393,33 @@ export default function Committee() {
               Organizing Committee
             </motion.h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-12">
               {organizingCommittee.map((group, groupIndex) => (
                 <div
                   key={groupIndex}
                   className="bg-muted rounded-lg shadow-sm p-6"
                 >
-                  <h3 className="text-xl text-primary font-semibold mb-4">
+                  <h3 className="text-2xl text-primary font-semibold mb-6">
                     {group.title}
                   </h3>
-                  <div className="space-y-4">
+                  <div className="flex flex-col md:flex-row md:flex-wrap gap-6 justify-around">
                     {group.members.map((member, memberIndex) => (
                       <div
                         key={memberIndex}
-                        className="p-4 bg-white rounded-lg shadow-sm border border-muted transition-all duration-300"
+                        className="p-4 bg-white rounded-lg shadow-sm border border-muted transition-all duration-300 w-full md:w-[calc(50%-0.75rem)]"
                       >
-                        <h4 className="text-lg font-medium text-foreground mb-2">
-                          {member.name}
-                        </h4>
-                        <p className="text-sm text-muted-foreground mb-3">
-                          {member.position}
-                        </p>
+                        <div className="flex-grow">
+                          <h4 className="text-xl font-medium text-foreground">
+                            {member.name}
+                          </h4>
+                          <p className="text-muted-foreground">
+                            {member.position}
+                          </p>
+                        </div>
 
                         {/* Contact Details Section */}
                         {(member.email || member.mobile || member.ieeeId) && (
-                          <div className="border-t pt-3 flex flex-row flex-wrap items-center justify-around gap-y-2">
+                          <div className="border-t pt-3 flex flex-row flex-wrap items-center justify-around gap-y-2 mt-3">
                             <div
                               className={`flex items-center gap-2 w-50 ${!member.email ? "invisible" : ""}`}
                             >
@@ -488,12 +489,12 @@ export default function Committee() {
                   {technicalCommittee.kerala.map((member, index) => (
                     <div
                       key={index}
-                      className="p-4 bg-white rounded-lg shadow-sm border border-muted transition-all duration-300 w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
+                      className="p-4 bg-white rounded-lg shadow-sm border border-muted transition-all duration-300 w-full md:w-[calc(50%-0.75rem)]"
                     >
-                      <h4 className="text-lg font-medium text-foreground">
+                      <h4 className="text-xl font-medium text-foreground">
                         {member.name}
                       </h4>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-muted-foreground">
                         {member.affiliation}
                       </p>
                     </div>
@@ -510,12 +511,12 @@ export default function Committee() {
                   {technicalCommittee.india.map((member, index) => (
                     <div
                       key={index}
-                      className="p-4 bg-white rounded-lg shadow-sm border border-muted transition-all duration-300 w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
+                      className="p-4 bg-white rounded-lg shadow-sm border border-muted transition-all duration-300 w-full md:w-[calc(50%-0.75rem)]"
                     >
-                      <h4 className="text-lg font-medium text-foreground">
+                      <h4 className="text-xl font-medium text-foreground">
                         {member.name}
                       </h4>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-muted-foreground">
                         {member.affiliation}
                       </p>
                     </div>
@@ -532,12 +533,12 @@ export default function Committee() {
                   {technicalCommittee.international.map((member, index) => (
                     <div
                       key={index}
-                      className="p-4 bg-white rounded-lg shadow-sm border border-muted transition-all duration-300 w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
+                      className="p-4 bg-white rounded-lg shadow-sm border border-muted transition-all duration-300 w-full md:w-[calc(50%-0.75rem)]"
                     >
-                      <h4 className="text-lg font-medium text-foreground">
+                      <h4 className="text-xl font-medium text-foreground">
                         {member.name}
                       </h4>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-muted-foreground">
                         {member.affiliation}
                       </p>
                     </div>
