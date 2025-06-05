@@ -15,6 +15,10 @@ export default function Navbar() {
 
   const links = [
     {
+      href: "/",
+      label: "Home",
+    },
+    {
       href: "/committee",
       label: "Committee",
     },
@@ -150,7 +154,7 @@ export default function Navbar() {
             className={`md:hidden ${isScrolled ? "ml-auto" : "absolute right-4"}`}
           >
             <button
-              className="p-2 rounded-full transition-all duration-200 hover:bg-secondary/10 hover:text-secondary"
+              className="p-2 rounded-full transition-all duration-200 cursor-pointer"
               onClick={toggleMenu}
               aria-label={isOpen ? "Close menu" : "Open menu"}
               aria-expanded={isOpen}
@@ -175,7 +179,7 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-0 bg-black/50 z-40 md:hidden"
+              className="fixed inset-0 bg-black/50 z-40 md:hidden "
               onClick={toggleMenu}
             />
 
@@ -209,7 +213,7 @@ export default function Navbar() {
                   </Link>
                   <button
                     onClick={toggleMenu}
-                    className="p-2 rounded-full hover:bg-secondary/10 text-foreground hover:text-secondary transition-colors"
+                    className="p-2 rounded-full text-foreground hover:text-secondary transition-colors cursor-pointer"
                     aria-label="Close menu"
                   >
                     <svg
