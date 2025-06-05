@@ -38,14 +38,14 @@ export default function Navbar() {
       href: "/camera-ready",
       label: "Camera Ready Submissions",
     },
-    // {
-    //   href: "/event-details",
-    //   label: "Event Details",
-    // },
-    // {
-    //   href: "/contact",
-    //   label: "Contact Us",
-    // },
+    {
+      href: "/event-details",
+      label: "Event Details",
+    },
+    {
+      href: "/#contact",
+      label: "Contact Us",
+    },
   ];
 
   // Disable scroll when mobile menu is open

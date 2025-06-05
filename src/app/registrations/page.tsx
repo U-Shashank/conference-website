@@ -226,8 +226,8 @@ export default function Registrations() {
                       colSpan={5}
                       className="px-6 py-4 text-sm font-medium text-foreground"
                     >
-                      Last Date for Author Registration (on or before 8 Feb
-                      2025)
+                      Last Date for Author Registration (on or before 20 Jan
+                      2026)
                     </td>
                   </tr>
                   <tr>
@@ -286,7 +286,7 @@ export default function Registrations() {
                       colSpan={5}
                       className="px-6 py-4 text-sm font-medium text-foreground"
                     >
-                      Late Registration (after 8 Feb 2025 up to 10 Feb 2025)
+                      Late Registration (after 20 Jan 2026 up to 22 Jan 2026)
                     </td>
                   </tr>
                   <tr>

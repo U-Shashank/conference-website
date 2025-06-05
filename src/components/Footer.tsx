@@ -17,8 +17,31 @@ export default function Footer() {
 
   // Previous conference versions
   const previousConferences = [
-    { year: "2025", location: "Kottayam, Kerala", link: "https://icitiit25.iiitkottayam.ac.in"},
-    { year: "2024", location: "Kottayam, Kerala", link: "https://icitiit24.iiitkottayam.ac.in"},
+    {
+      year: "2025",
+      location: "Kottayam, Kerala",
+      link: "https://icitiit25.iiitkottayam.ac.in",
+    },
+    {
+      year: "2024",
+      location: "Kottayam, Kerala",
+      link: "https://icitiit24.iiitkottayam.ac.in",
+    },
+    {
+      year: "2023",
+      location: "Kottayam, Kerala",
+      link: "https://icitiit23.iiitkottayam.ac.in",
+    },
+    {
+      year: "2022",
+      location: "Kottayam, Kerala",
+      link: "https://icitiit22.iiitkottayam.ac.in",
+    },
+    {
+      year: "2021",
+      location: "Kottayam, Kerala",
+      link: "https://icitiit21.iiitkottayam.ac.in",
+    },
   ];
 
   // Useful links
@@ -32,7 +55,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-black text-gray-300 pt-16 pb-6">
+    <footer id="footer" className="bg-black text-gray-300 pt-16 pb-6">
       <div className="max-w-7xl mx-auto px-4">
         {/* Footer Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12 justify-center text-center">
@@ -104,7 +127,11 @@ export default function Footer() {
           </div>
 
           {/* Useful Links */}
-          <div className="text-center md:text-left">
+          <div className="relative text-center md:text-left">
+            <div
+              id="contact"
+              className="absolute top-0 md:-top-20 invisible"
+            ></div>
             <h3 className="text-xl font-semibold text-primary mb-4">
               Useful Links
             </h3>
@@ -145,6 +172,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href={conf.link}
+                    target="_blank"
                     className="text-gray-300 hover:text-blue-500 text-sm flex items-center transition-colors justify-center md:justify-start"
                   >
                     <svg
@@ -190,7 +218,13 @@ export default function Footer() {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     ></path>
                   </svg>
-                  info@icitiit.org
+                  <a
+                    href="mailto:icitiit26@iiitkottayam.ac.in"
+                    className="hover:text-blue-500 transition-colors"
+                    target="_blank"
+                  >
+                    icitiit26@iiitkottayam.ac.in
+                  </a>
                 </p>
 
                 <p className="text-gray-300 text-sm flex items-center justify-center md:justify-start">
