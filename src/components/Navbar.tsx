@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
@@ -61,20 +61,20 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Only update state when crossing the threshold to avoid unnecessary re-renders
       if (!isScrolled && currentScrollY > scrollThreshold) {
         setIsScrolled(true);
       } else if (isScrolled && currentScrollY <= scrollThreshold) {
         setIsScrolled(false);
       }
-      
+
       lastScrollY.current = currentScrollY;
     };
-    
+
     // Use passive listener for better performance
     window.addEventListener("scroll", handleScroll, { passive: true });
-    
+
     // Initial check in case page is loaded scrolled down
     handleScroll();
 
@@ -83,14 +83,13 @@ export default function Navbar() {
     };
   }, [isScrolled]);
 
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav 
+    <nav
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-background shadow-md py-2 border-b-2 border-secondary" 
+        isScrolled
+          ? "bg-background shadow-md py-2 border-b-2 border-secondary"
           : "bg-background py-4"
       }`}
       ref={navRef}
@@ -99,33 +98,32 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo - only visible when scrolled/sticky */}
           <div>
-
             <div className="sm:w-0 flex-shrink-0">
               <Link href="/" className="flex items-center">
                 <Image
-                  src={logo} 
+                  src={logo}
                   alt="ICITIIT"
                   width={60}
                   height={60}
                   className="object-contain"
-                  />
+                />
                 {/* <span className="ml-2 text-secondary font-bold hidden sm:inline">ICITIIT Conference</span> */}
               </Link>
             </div>
-          {isScrolled && (
-            <div className="hidden sm:block flex-shrink-0">
-              <Link href="/" className="flex items-center">
-                <Image
-                  src={logo} 
-                  alt="ICITIIT"
-                  width={60}
-                  height={60}
-                  className="object-contain"
+            {isScrolled && (
+              <div className="hidden sm:block flex-shrink-0">
+                <Link href="/" className="flex items-center">
+                  <Image
+                    src={logo}
+                    alt="ICITIIT"
+                    width={60}
+                    height={60}
+                    className="object-contain"
                   />
-                {/* <span className="ml-2 text-secondary font-bold hidden sm:inline">ICITIIT Conference</span> */}
-              </Link>
-            </div>
-          )}
+                  {/* <span className="ml-2 text-secondary font-bold hidden sm:inline">ICITIIT Conference</span> */}
+                </Link>
+              </div>
+            )}
           </div>
 
           {/* Desktop Menu */}
@@ -136,8 +134,8 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isScrolled 
-                      ? "text-foreground hover:text-secondary hover:bg-secondary/10" 
+                    isScrolled
+                      ? "text-foreground hover:text-secondary hover:bg-secondary/10"
                       : "text-foreground hover:text-primary"
                   }`}
                 >
@@ -148,7 +146,9 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button with SVG animated icon */}
-          <div className={`md:hidden ${isScrolled ? "ml-auto" : "absolute right-4"}`}>
+          <div
+            className={`md:hidden ${isScrolled ? "ml-auto" : "absolute right-4"}`}
+          >
             <button
               className="p-2 rounded-full transition-all duration-200 hover:bg-secondary/10 hover:text-secondary"
               onClick={toggleMenu}
@@ -156,7 +156,10 @@ export default function Navbar() {
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
             >
-              <HamburgerIcon open={isOpen} className={isScrolled ? "text-foreground" : "text-foreground"} />
+              <HamburgerIcon
+                open={isOpen}
+                className={isScrolled ? "text-foreground" : "text-foreground"}
+              />
             </button>
           </div>
         </div>
@@ -191,9 +194,13 @@ export default function Navbar() {
               <div className="h-full flex flex-col overflow-y-auto">
                 {/* Mobile Menu Logo */}
                 <div className="px-6 py-6 border-b-2 border-secondary flex justify-between items-center">
-                  <Link href="/" className="flex items-center" onClick={toggleMenu}>
+                  <Link
+                    href="/"
+                    className="flex items-center"
+                    onClick={toggleMenu}
+                  >
                     <Image
-                      src={logo} 
+                      src={logo}
                       alt="ICITIIT"
                       width={60}
                       height={60}
@@ -205,7 +212,17 @@ export default function Navbar() {
                     className="p-2 rounded-full hover:bg-secondary/10 text-foreground hover:text-secondary transition-colors"
                     aria-label="Close menu"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
                       <line x1="18" y1="6" x2="6" y2="18"></line>
                       <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>

@@ -45,8 +45,8 @@ export default function Footer() {
               ICITIIT'26
             </h3>
             <p className="text-gray-300 text-sm mb-4">
-              The 7th International Conference on Innovative Trends In
-              Information Technology (ICITIIT'26) is an event covering all
+              The 7<sup>th</sup> International Conference on Innovative Trends
+              In Information Technology (ICITIIT'26) is an event covering all
               aspects of software and hardware designs of intelligent and smart
               computing systems. The conference is technically co-sponsored by
               IEEE Kerala Section.
@@ -178,7 +178,6 @@ export default function Footer() {
             </h3>
             <div className="flex justify-center">
               <div className="space-y-3 flex flex-col">
-
                 <p className="text-gray-300 text-sm flex items-center justify-center md:justify-start">
                   <svg
                     className="w-5 h-5 mr-3 flex-shrink-0 text-primary"

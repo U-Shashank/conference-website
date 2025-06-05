@@ -379,7 +379,7 @@ export default function Registrations() {
                 <h3 className="text-2xl font-semibold text-primary mb-6">
                   Important Notes
                 </h3>
-                <ul className="space-y-4">
+                <ul className="space-y-4 text-justify">
                   <li className="flex items-start">
                     <svg
                       className="w-6 h-6 text-primary mr-2 flex-shrink-0"

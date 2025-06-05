@@ -19,7 +19,8 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   title: "TechConf | Modern Technology Conference",
-  description: "Join us for the premier technology conference of the year. Cutting-edge talks, workshops, and networking.",
+  description:
+    "Join us for the premier technology conference of the year. Cutting-edge talks, workshops, and networking.",
 };
 
 export default function RootLayout({

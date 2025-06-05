@@ -39,10 +39,26 @@ export default function Home() {
   ];
 
   const [importantDates, setImportantDates] = useState([
-    { date: "June 11, 2025", event: "Call for Papers Announcement", current: false },
-    { date: "August 14, 2025", event: "Draft Paper Submission", current: false },
-    { date: "September 16, 2025", event: "Notification of Acceptance", current: false },
-    { date: "October 15, 2025", event: "Final Camera-ready Paper", current: false },
+    {
+      date: "June 11, 2025",
+      event: "Call for Papers Announcement",
+      current: false,
+    },
+    {
+      date: "August 14, 2025",
+      event: "Draft Paper Submission",
+      current: false,
+    },
+    {
+      date: "September 16, 2025",
+      event: "Notification of Acceptance",
+      current: false,
+    },
+    {
+      date: "October 15, 2025",
+      event: "Final Camera-ready Paper",
+      current: false,
+    },
   ]);
 
   useEffect(() => {
@@ -61,7 +77,7 @@ export default function Home() {
           ...date,
           current: isCurrent,
         };
-      })
+      }),
     );
   }, []);
 
@@ -89,24 +105,25 @@ export default function Home() {
               Conference Information
             </motion.h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-center md:text-left"
+                className="text-justify"
               >
-                <h3 className="text-2xl text-foreground font-semibold mb-6">
+                <h3 className="text-2xl text-foreground font-semibold mb-6 text-center lg:text-left">
                   Conference Overview
                 </h3>
-                <p className="text-foreground mb-4 text-balance">
-                  The 7th International Conference on Innovative Trends in
-                  Information Technology (ICIIT 2026), held in Kottayam, Kerala,
-                  India, highlights "AI, Automation, and Beyond: Pioneering
-                  Trends in Information Technology" as its central theme.
+                <p className="text-foreground mb-4">
+                  The 7<sup>th</sup> International Conference on Innovative
+                  Trends in Information Technology (ICITIIT 2026), held in
+                  Kottayam, Kerala, India, highlights "AI, Automation, and
+                  Beyond: Pioneering Trends in Information Technology" as its
+                  central theme.
                 </p>
-                <p className="text-foreground mb-4 text-balance">
+                <p className="text-foreground mb-4">
                   This conference explores the transformative trends in
                   information technology, focusing on the convergence of
                   artificial intelligence (AI), automation, and next-generation
@@ -115,7 +132,7 @@ export default function Home() {
                   language processing, as well as the impact of automation in
                   enhancing efficiency across various industries.
                 </p>
-                <p className="text-foreground mb-4 text-balance">
+                <p className="text-foreground mb-4">
                   Additionally, it delves into emerging fields like edge
                   computing, quantum computing, and blockchain, while addressing
                   key ethical issues such as algorithmic bias and workforce
@@ -124,20 +141,20 @@ export default function Home() {
                   advancements responsibly and strategically.
                 </p>
                 <p className="text-foreground mb-4">
-                  We invite original research papers on topics including
-                  but not limited to:
+                  We invite original research papers on topics including but not
+                  limited to:
                 </p>
-                <div className="flex justify-center md:justify-start text-left">
+                <div className="flex justify-start text-left">
                   <ul className="list-disc pl-5 mb-6 text-left text-foreground">
-                  <li>Artificial Intelligence and Machine Learning</li>
-                  <li>Ethical Implications of AI Systems</li>
-                  <li>Cybersecurity and Secure Computing</li>
-                  <li>Big Data Analytics and Data Science</li>
-                  <li>Internet of Things (IoT) and Smart Systems</li>
-                  <li>Cloud Computing and Distributed Systems</li>
-                  <li>Blockchain Technologies and Applications</li>
-                  <li>Human-Computer Interaction</li>
-                  <li>Edge Computing and Quantum Computing</li>
+                    <li>Artificial Intelligence and Machine Learning</li>
+                    <li>Ethical Implications of AI Systems</li>
+                    <li>Cybersecurity and Secure Computing</li>
+                    <li>Big Data Analytics and Data Science</li>
+                    <li>Internet of Things (IoT) and Smart Systems</li>
+                    <li>Cloud Computing and Distributed Systems</li>
+                    <li>Blockchain Technologies and Applications</li>
+                    <li>Human-Computer Interaction</li>
+                    <li>Edge Computing and Quantum Computing</li>
                   </ul>
                 </div>
               </motion.div>
@@ -215,7 +232,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="py-16 px-4 bg-white"
         >
-          <div className="max-w-7xl mx-auto text-center lg:text-lft px-2">
+          <div className="max-w-7xl mx-auto text-center text-justify px-2">
             <motion.h2
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}

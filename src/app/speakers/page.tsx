@@ -1,46 +1,50 @@
-"use client"
-import { useState, useRef, useEffect } from 'react';
-import * as motion from 'motion/react-client';
-import pic from "@/assets/logo.png"
+"use client";
+import { useState, useRef, useEffect } from "react";
+import * as motion from "motion/react-client";
+import pic from "@/assets/logo.png";
 
 export default function Speakers() {
   // For scroll-based animations
   const plenaryRef = useRef(null);
   const keynoteRef = useRef(null);
-  
+
   // Speaker data
   const plenarySpeakers = [
     {
       name: "Prof. Somdatta Sinha",
-      title: "INSA Senior Scientist & Adjunct Prof. (IISER Kolkata & IISER Mohali). CCMB Hyderabad",
+      title:
+        "INSA Senior Scientist & Adjunct Prof. (IISER Kolkata & IISER Mohali). CCMB Hyderabad",
       talkTitle: "Biological Data and Computation",
       date: "21 February 2025",
-      image: pic // Replace with actual image path
+      image: pic, // Replace with actual image path
     },
     {
       name: "Prof. A M Mathai",
-      title: "Emeritus Professor of Mathematics and Statistics, McGill University, Canada and Director of the Centre for Mathematical and Statistical Sciences, India",
-      talkTitle: "On Some Recent Research in Statistics and Fractional Calculus",
+      title:
+        "Emeritus Professor of Mathematics and Statistics, McGill University, Canada and Director of the Centre for Mathematical and Statistical Sciences, India",
+      talkTitle:
+        "On Some Recent Research in Statistics and Fractional Calculus",
       date: "21 February 2025",
-      image: pic // Replace with actual image path
-    }
+      image: pic, // Replace with actual image path
+    },
   ];
-  
+
   const keynoteSpeakers = [
     {
       name: "Sreekumar K P",
       title: "Vice president and Head Media and Communication at Tata Elxsi",
       talkTitle: "Gen AI:The great Job reshuffle",
       date: "21 February 2025",
-      image: pic // Replace with actual image path
+      image: pic, // Replace with actual image path
     },
     {
       name: "Dr. Rohini P",
       title: "Assistant Professor, IITDM Kanchipuram",
-      talkTitle: "Image biomarkers for early diagnosis of neurodegenerative disorders.",
+      talkTitle:
+        "Image biomarkers for early diagnosis of neurodegenerative disorders.",
       date: "21 February 2025, 12.35 PM (IST)",
-      image: pic // Replace with actual image path
-    }
+      image: pic, // Replace with actual image path
+    },
   ];
 
   return (
@@ -51,30 +55,32 @@ export default function Speakers() {
         <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-20 z-10"></div>
         <div className="absolute inset-0 flex items-center justify-center z-20">
           <div className="max-w-4xl mx-auto text-center px-4">
-          <motion.h1 
+            <motion.h1
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-6xl font-bold mb-4 text-white"
             >
-            Our Distinguished Speakers
+              Our Distinguished Speakers
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-white/90 max-w-2xl mx-auto"
             >
-            Featuring renowned experts in information technology, artificial intelligence, and data science sharing their insights and latest research
+              Featuring renowned experts in information technology, artificial
+              intelligence, and data science sharing their insights and latest
+              research
             </motion.p>
           </div>
         </div>
       </header>
 
       {/* Main Content - Vertically stacked sections */}
-      <main className='text-balance text-center'>
+      <main className="text-balance text-center invisible">
         {/* Plenary Talks Section */}
-        <motion.section 
+        <motion.section
           ref={plenaryRef}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -84,7 +90,7 @@ export default function Speakers() {
         >
           <div className="max-w-7xl mx-auto">
             <motion.h2
-              viewport={{once:true}} 
+              viewport={{ once: true }}
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
@@ -107,7 +113,7 @@ export default function Speakers() {
                   <div className="flex flex-col md:flex-row h-full text-center">
                     <div className="md:w-2/5 relative">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20"></div>
-                      <img 
+                      <img
                         src={speaker.image.src}
                         alt={speaker.name}
                         className="w-full h-full object-cover object-center md:aspect-square"
@@ -115,25 +121,45 @@ export default function Speakers() {
                     </div>
                     <div className="md:w-3/5 p-6 flex flex-col justify-between">
                       <div>
-                        <h3 className="text-2xl font-bold text-foreground mb-2">{speaker.name}</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-2">
+                          {speaker.name}
+                        </h3>
                         <div className="flex items-center justify-center h-[100]">
-                          <p className="text-sm text-muted-foreground mb-4 text-center">{speaker.title}</p>
-                        </div>                        <div className="mb-4">
+                          <p className="text-sm text-muted-foreground mb-4 text-center">
+                            {speaker.title}
+                          </p>
+                        </div>{" "}
+                        <div className="mb-4">
                           <span className="inline-block bg-primary/10 text-primary px-3 py-1 text-sm font-medium rounded-full">
                             Plenary Speaker
                           </span>
                         </div>
-                        <h4 className="text-lg font-semibold text-primary mb-1">Talk Title:</h4>
-                        <p className="text-foreground mb-4 h-[50]">"{speaker.talkTitle}"</p>
+                        <h4 className="text-lg font-semibold text-primary mb-1">
+                          Talk Title:
+                        </h4>
+                        <p className="text-foreground mb-4 h-[50]">
+                          "{speaker.talkTitle}"
+                        </p>
                       </div>
-                        <div className="mt-auto flex justify-center">
+                      <div className="mt-auto flex justify-center">
                         <div className="flex items-center text-muted-foreground">
-                          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                          <svg
+                            className="w-5 h-5 mr-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                            ></path>
                           </svg>
                           <span>{speaker.date}</span>
                         </div>
-                        </div>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -148,7 +174,7 @@ export default function Speakers() {
         </div>
 
         {/* Keynote Sessions Section */}
-        <motion.section 
+        <motion.section
           ref={keynoteRef}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -158,7 +184,7 @@ export default function Speakers() {
         >
           <div className="max-w-7xl mx-auto">
             <motion.h2
-              viewport={{once:true}} 
+              viewport={{ once: true }}
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
@@ -181,7 +207,7 @@ export default function Speakers() {
                   <div className="flex flex-col md:flex-row h-full">
                     <div className="md:w-2/5 relative">
                       <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-primary/20"></div>
-                      <img 
+                      <img
                         src={speaker.image.src}
                         alt={speaker.name}
                         className="w-full h-full object-cover object-center md:aspect-square"
@@ -189,26 +215,45 @@ export default function Speakers() {
                     </div>
                     <div className="md:w-3/5 p-6 flex flex-col justify-between">
                       <div>
-                        <h3 className="text-2xl font-bold text-foreground mb-2">{speaker.name}</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-2">
+                          {speaker.name}
+                        </h3>
                         <div className="flex items-center justify-center h-[100]">
-                          <p className="text-sm text-muted-foreground mb-4 text-center">{speaker.title}</p>
+                          <p className="text-sm text-muted-foreground mb-4 text-center">
+                            {speaker.title}
+                          </p>
                         </div>
                         <div className="mb-4">
                           <span className="inline-block bg-secondary/10 text-secondary px-3 py-1 text-sm font-medium rounded-full">
                             Keynote Speaker
                           </span>
                         </div>
-                        <h4 className="text-lg font-semibold text-primary mb-1">Talk Title:</h4>
-                        <p className="text-foreground mb-4 h-[50]">"{speaker.talkTitle}"</p>
+                        <h4 className="text-lg font-semibold text-primary mb-1">
+                          Talk Title:
+                        </h4>
+                        <p className="text-foreground mb-4 h-[50]">
+                          "{speaker.talkTitle}"
+                        </p>
                       </div>
                       <div className="mt-auto flex justify-center">
                         <div className="flex items-center text-muted-foreground">
-                          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                          <svg
+                            className="w-5 h-5 mr-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                            ></path>
                           </svg>
                           <span>{speaker.date}</span>
                         </div>
-                        </div>
+                      </div>
                     </div>
                   </div>
                 </motion.div>

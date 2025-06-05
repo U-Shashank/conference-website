@@ -14,21 +14,21 @@ export default function CameraReadySubmission() {
         <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-20 z-10"></div>
         <div className="absolute inset-0 flex items-center justify-center z-20">
           <div className="max-w-4xl mx-auto text-center px-4">
-          <motion.h1 
+            <motion.h1
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-6xl font-bold mb-4 text-white"
             >
-            Camera Ready Submission{" "}
+              Camera Ready Submission{" "}
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-white/90 max-w-2xl mx-auto"
             >
-            Guidelines and instructions for authors with accepted papers
+              Guidelines and instructions for authors with accepted papers
             </motion.p>
           </div>
         </div>
