@@ -95,7 +95,7 @@ export default function CameraReadySubmission() {
                     per the guidelines given on the conference website on or
                     before{" "}
                     <span className="text-primary font-bold">
-                      13th February, 2025
+                      15<sup>th</sup> October, 2025
                     </span>
                     .
                   </p>
@@ -134,7 +134,7 @@ export default function CameraReadySubmission() {
                   </p>
                   <p className="text-foreground mt-2">
                     The papers exceeding 6 pages (a maximum of 8 pages) should
-                    pay extra page charge of Rs.1000/per page- (Indian authors)
+                    pay extra page charge of Rs.1000/- per page (Indian authors)
                     or 20 USD (Foreign Authors)
                   </p>
                 </div>

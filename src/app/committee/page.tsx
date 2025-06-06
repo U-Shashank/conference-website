@@ -43,7 +43,7 @@ export default function Committee() {
       ],
     },
     {
-      title: "Co Patrons",
+      title: "Co-Patrons",
       members: [
         {
           name: "Dr. Ebin Deni Raj",

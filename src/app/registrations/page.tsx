@@ -336,7 +336,7 @@ export default function Registrations() {
             >
               <p className="text-foreground">
                 The manuscript exceeding 6 pages should pay extra page charge of
-                Rs.1000/per page (Indian authors) or 20 USD (Foreign Authors).
+                Rs.1000/- per page (Indian authors) or 20 USD (Foreign Authors).
                 The manuscript can be maximum of 8 pages.
               </p>
             </motion.div>

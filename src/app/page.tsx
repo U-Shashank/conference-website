@@ -279,7 +279,7 @@ export default function Home() {
                 <motion.div
                   whileHover={{ rotate: 0 }}
                   viewport={{ once: true }}
-                  className="relative w-full max-w-md aspect-video"
+                  className="relative w-full max-w-lg aspect-video"
                 >
                   <img
                     src={campusImage.src}
@@ -301,7 +301,7 @@ export default function Home() {
                 <motion.div
                   whileHover={{ rotate: 0 }}
                   viewport={{ once: true }}
-                  className="relative w-full max-w-md aspect-video"
+                  className="relative w-full max-w-lg aspect-video"
                 >
                   <img
                     src={facultyImage.src}

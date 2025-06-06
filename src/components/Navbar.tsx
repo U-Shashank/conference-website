@@ -132,7 +132,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className={`hidden md:block ${isScrolled ? "" : "mx-auto"}`}>
-            <div className="flex items-center space-x-1">
+            <div className="flex items-center space-x-1 text-nowrap">
               {links.map((link) => (
                 <Link
                   key={link.href}
